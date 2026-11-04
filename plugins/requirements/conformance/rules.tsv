@@ -1,0 +1,19 @@
+# The rules that the files of the requirements pack own, as data.
+#
+# Grove's `plugins/grove/conformance/rules.tsv` states the five tab-separated
+# columns: rule, owner, class, load and phrase. Grove's
+# `docs/specs/external-pack-contract.md`, "Conformance", states what a run
+# checks with this manifest alone and in the aggregate with core.
+#
+# Each owner is a file that this pack ships. A rule ID is unique across this
+# manifest and every manifest that a run supplies.
+grilling-procedure	grove-requirements/grilling.md	B	on(the grilling threshold is met) @ grove-requirements/SKILL.md	
+no-writes-before-shared-understanding	grove-requirements/grilling.md	B	on(the grilling threshold is met) @ grove-requirements/SKILL.md	
+probe-with-concrete-scenarios	grove-requirements/grilling.md	B	on(the grilling threshold is met) @ grove-requirements/SKILL.md	stress-test them with specific scenarios
+agree-the-seams-during-grilling	grove-requirements/SKILL.md	B	static({requirements})	
+grilling-threshold	grove-requirements/SKILL.md	B*	static({requirements})	
+pre-decided-is-not-a-grilling-question	grove-requirements/SKILL.md	B	static({requirements})	
+requirements-establishes-what	grove-requirements/SKILL.md	B	static({requirements})	
+sequence-interdependent-questions	grove-requirements/SKILL.md	B	static({requirements})	
+small-workstream-may-fuse-the-three	grove-requirements/SKILL.md	B	static({requirements})	
+when-not-to-start-a-grove	grove-requirements/SKILL.md	B	static({requirements})	
