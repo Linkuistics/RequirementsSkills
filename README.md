@@ -96,11 +96,9 @@ repository.
 - `task check:plugin` checks the Claude Code plugin with
   `claude plugin validate`. It skips when Claude Code is not installed.
 
-`GROVE_COMMIT` names Grove commit `6cdab3a9883342e68fe51b3913d8c72ddb26e3bf`,
-which still ships Grove's own copies of these skills. With that commit, the
-pack passes alone. The aggregate fails, because it reads each requirements
-skill and each moved rule twice. A later commit of this pack names the Grove
-commit that removes Grove's copies, and its aggregate passes.
+`GROVE_COMMIT` names Grove commit `302f85429e4b8f8ada02be594687155109dfbf6b`,
+which removed Grove's own copies of these skills. The pack passes alone, and
+the aggregate reads each requirements skill and each moved rule once.
 
 ## Provenance
 
@@ -115,6 +113,10 @@ at these paths:
 Grove keeps the full history of these files. This repository imports none of
 it. The move changed the opening paragraph of each kind skill and changed no
 other text.
+
+Grove commit `302f85429e4b8f8ada02be594687155109dfbf6b` removed Grove's copies
+of these files. `GROVE_COMMIT` names that commit, so the aggregate check reads
+each requirements skill once.
 
 `grove-requirements` adapts and bundles passages of
 [mattpocock/skills](https://github.com/mattpocock/skills), which uses the MIT
