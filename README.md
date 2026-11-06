@@ -38,45 +38,32 @@ conformance rules.
 
 ## Install
 
-Each route also needs Grove's core, which supplies the `grove` skill.
-
-### Ravel
-
-Add this record to the `skills.sources` list of the Ravel settings, beside the
-record of Grove's core. Replace `<checkout>` with the absolute path of a
-checkout of this repository:
-
-```json
-{ "id": "requirements", "type": "local", "path": "<checkout>/plugins/requirements", "roots": ["skills"] }
-```
-
-Ravel reads the checkout as a local directory. It does not fetch or update the
-checkout. A tool outside Ravel holds the checkout at a published commit.
-
-### Claude Code plugin
-
-Install the plugin from Grove's marketplace:
-
-```text
-/plugin marketplace add Linkuistics/grove
-/plugin install requirements@linkuistics
-```
-
-The manifest declares the dependency `grove`, so the installation also adds
-Grove's core. The skills then have the namespace `requirements:`, for example
-`requirements:grove-requirements`.
-
-### Manual installation
-
-Grove's manual installer links the skills of a pack:
+Install the `grove` formula with Homebrew:
 
 ```sh
-<grove checkout>/plugins/install.sh --pack <requirements checkout>/plugins/requirements
+brew tap Linkuistics/taps
+brew install grove
 ```
 
-Grove's marketplace entry for this pack arrives with the Grove release that
-removes the requirements kinds from core. Until that release, Grove ships its
-own copies of these kinds.
+Grove's formula carries Grove's core and the five domain packs, and this pack
+is one of them. Core supplies the `grove` skill that each kind loads. Each pack
+is at the commit that Grove's pack check accepted, so a change to this pack
+reaches users through a Grove release. The keg holds the source directory
+`plugins/requirements` at `share/ravel/skills/requirements`. Homebrew links it into
+`$(brew --prefix)/share/ravel/skills/`.
+
+Ravel delivers the skills. Ravel 2.0.0 reads that directory when its settings
+name no sources, and it gives each session that it starts the skills of
+the root `skills`. `brew upgrade` keeps the pack current. No harness finds the
+skills in the keg alone, and this pack has no native marketplace entry or
+installer step.
+
+### Development
+
+A checkout of this repository can serve as a trial source. Name
+`<checkout>/plugins/requirements` with the root `skills` in the `skills` object of the
+Ravel settings. Ravel captures the uncommitted changes of the checkout. It
+does not fetch or update the checkout.
 
 ## Checks
 
