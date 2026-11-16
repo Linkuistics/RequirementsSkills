@@ -15,6 +15,9 @@ loads.
 
 `grove-requirements/grilling.md` holds the interview procedure. It is a
 resource of the `grove-requirements` skill, not a kind.
+`grove-requirements/reader-test.md` holds the procedure of a reader
+checkpoint. The skill reaches it only when the leaf holds a reader
+checkpoint. It is not a kind either.
 
 The review and integration kinds belong to families whose members ship in
 several packs. Their family procedures therefore stay in Grove's spine, as

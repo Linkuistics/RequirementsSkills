@@ -57,6 +57,13 @@ committed: "these are the seams — do they match what you expected?" That check
 is a grilling move, and this is the session with a human in the loop to make it.
 `SPEC-FORMAT.md` says where the agreement is recorded.
 
+## A leaf that holds a reader checkpoint
+
+**When this leaf holds a reader checkpoint, `reader-test.md` is the
+procedure.** A document contract declares the checkpoint. The session that
+cut the document's leaf placed this leaf after the document's `proof`. In a
+leaf without a reader checkpoint, do not read that file.
+
 ## The fresh grove's bootstrap leaf
 
 A brand-new grove's first leaf is a `requirements` leaf the driver minted before
