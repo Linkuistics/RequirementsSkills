@@ -1,5 +1,11 @@
 # RequirementsSkills
 
+> **Archived.** This repository moved into
+> [Ravel](https://github.com/Linkuistics/Ravel), in
+> [`packs/requirements/`](https://github.com/Linkuistics/Ravel/tree/main/packs/requirements). Make each
+> change there. This repository is read-only. It keeps the history from
+> before the move.
+
 RequirementsSkills is the requirements pack of
 [Grove](https://github.com/Linkuistics/grove). It ships Grove's requirements
 session kinds as agent skills. Grove's core supplies the spine that each kind
